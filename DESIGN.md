@@ -168,6 +168,14 @@ timer is not, and closer to the Prethoryn it is modelled on. Current prototype:
   still creeps
 - `<upon defeating a [Military] unit> <with [50]% chance>` — the real engine
 
+**Convention for every crisis unit: replication rate scales inversely with
+strength.** Cheap, fragile units breed fast; heavy units barely breed at all and
+arrive through waves instead. Crisis Knight sits at the light end — 50% on kill
+is deliberate for a 40-strength skirmisher. A late-tier heavy should be nearer
+10-20%, or carry no replication and rely on `rebel` waves. Tune the kill chance
+per unit before touching strength: since D, the kill chance *is* the growth
+control, and strength only changes how long a unit lives to use it.
+
 Both carry `<when number of [[Crisis Knight] Units] is less than [40]>`. The
 countable counts units owned by the relevant civ, which for a barbarian-owned
 unit is the Barbarians, so it is a hard global cap on swarm size. There is no
