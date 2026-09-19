@@ -1,6 +1,6 @@
 {
     "name": "Global Uniques",
     "uniques": [
-        "[2] [Crisis Knight]s rebel <upon turn start> <after turn number [5]> <before turn number [6]>", "Triggers a [The Awakening] event <upon turn start> <after turn number [280]> <every [5] turns> <with [20]% chance> <if [Crisis Beacon] is not constructed by anybody> <when number of [Cities] is more than [0]>"
+        "Triggers a [The Awakening] event <upon turn start> <after turn number [280]> <every [5] turns> <with [20]% chance> <if [Crisis Beacon] is not constructed by anybody> <when number of [Cities] is more than [0]>"
     ]
 }
