@@ -63,6 +63,7 @@ is in the artifact under Phase −1.
 | A | Does `<if [X] is constructed by anybody>` see a **trigger-granted** building? | **YES** |
 | B | Do Barbarians evaluate `GlobalUniques` `<upon turn start>` triggers? | **YES** |
 | C | Can Barbarians **own a city**? | **NO** |
+| D | Do unit-level `<upon turn end>` triggers fire on **barbarian-owned** units? | **YES** |
 
 Tested against Unciv 4.21.18.
 
@@ -142,6 +143,35 @@ set, a barbarian conquering a capital reaches `destroyCity` through the normal
 barbarian branch anyway, so the capital is razed regardless of which path is
 taken. The unit-level unique matters for non-barbarian owners of crisis units,
 which in this design is nobody — so it is arguably redundant on Crisis Knight.
+
+### D — unit-level triggers work, but growth must be coupled to success
+
+**Confirmed in play.** A Crisis Knight carrying
+`[1] free [Crisis Knight] units appear <upon turn end>` replicated, so unit-level
+trigger conditions reach barbarian-owned units just as civ-level ones do (B).
+`Free [unit] appears` on a unit grants to that unit's owner and places beside it,
+so the swarm propagates from where it already is rather than from a city.
+
+**But a flat per-turn chance is the wrong growth rule.** Observed: knights are
+often killed before they replicate. The arithmetic is unforgiving — a unit
+produces `p x (turns survived)` offspring, so at p=5% a knight must live ~20 turns
+just to replace itself. Replication rate and combat strength are therefore
+coupled: tuning one silently re-tunes the other, and a crisis that is merely
+*strong* still dies out if players kill fast enough.
+
+**Fix: grow by consuming.** `<upon defeating a [mapUnitFilter] unit>` makes the
+swarm a feedback loop that only accelerates where it is already winning, and
+stalls against defenders who beat it — which is self-balancing in a way a flat
+timer is not, and closer to the Prethoryn it is modelled on. Current prototype:
+
+- `<upon turn end> <with [3]% chance>` — slow ambient spread, so an idle swarm
+  still creeps
+- `<upon defeating a [Military] unit> <with [50]% chance>` — the real engine
+
+Both carry `<when number of [[Crisis Knight] Units] is less than [40]>`. The
+countable counts units owned by the relevant civ, which for a barbarian-owned
+unit is the Barbarians, so it is a hard global cap on swarm size. There is no
+other brake anywhere in the unique set.
 
 ### Delivery is not guaranteed, and not uniform
 
