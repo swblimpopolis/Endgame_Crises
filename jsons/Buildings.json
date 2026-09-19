@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Crisis Beacon",
+        "isNationalWonder": true,
+        "cost": -1,
+        "uniques": ["Unbuildable", "Will not be displayed in Civilopedia"]
+    }
+]

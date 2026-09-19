@@ -1,0 +1,13 @@
+[
+  {
+    "name": "The Awakening",
+    "presentation": "Alert",
+    "text": "Something vast has stirred beneath the earth...",
+    "choices": [
+      {
+        "text": "Sound the alarm",
+        "uniques": ["Gain a free [Crisis Beacon] [in capital]", "Triggers the following global alert: [The Awakening has begun]"]
+      }
+    ]
+  }
+]
