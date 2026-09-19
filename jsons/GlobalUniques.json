@@ -1,6 +1,20 @@
 {
     "name": "Global Uniques",
     "uniques": [
-        "Triggers a [The Awakening] event <upon turn start> <after turn number [280]> <every [5] turns> <with [20]% chance> <if [Crisis Beacon] is not constructed by anybody> <when number of [Cities] is more than [0]>"
+        "Triggers a [The Awakening] event <upon turn start> <after turn number [280]> <every [5] turns> <with [20]% chance> <if [Crisis Beacon] is not constructed by anybody> <when number of [Cities] is more than [0]>",
+        "[2] [Awakened Knight]s rebel <upon turn start> <every [4] turns> <if [Crisis Beacon] is constructed by anybody> <when number of [[Awakened Knight] Units] is less than [40]> <on [Prince] difficulty or lower>",
+        "[4] [Awakened Knight]s rebel <upon turn start> <every [4] turns> <if [Crisis Beacon] is constructed by anybody> <when number of [[Awakened Knight] Units] is less than [40]> <on [King] difficulty or higher>",
+        "[6] [Awakened Knight]s rebel <upon turn start> <every [4] turns> <if [Crisis Beacon] is constructed by anybody> <when number of [[Awakened Knight] Units] is less than [40]> <on [Immortal] difficulty or higher>",
+
+
+        "Triggers a [Stage II Awakening] event <upon turn start> <if [Crisis Beacon] is constructed by anybody> <every [5] turns> <with [20]% chance> <if [Crisis Stage II Beacon] is not constructed by anybody> <when number of [Cities] is more than [0]>",
+        "[2] [Awakened Rifleman]s rebel <upon turn start> <every [4] turns> <if [Crisis Stage II Beacon] is constructed by anybody> <when number of [[Awakened Rifleman] Units] is less than [40]> <on [Prince] difficulty or lower>",
+        "[3] [Awakened Rifleman]s rebel <upon turn start> <every [4] turns> <if [Crisis Stage II Beacon] is constructed by anybody> <when number of [[Awakened Rifleman] Units] is less than [40]> <on [King] difficulty or higher>",
+        "[4] [Awakened Rifleman]s rebel <upon turn start> <every [4] turns> <if [Crisis Stage II Beacon] is constructed by anybody> <when number of [[Awakened Rifleman] Units] is less than [40]> <on [Immortal] difficulty or higher>",
+
+        "Triggers a [Stage III Awakening] event <upon turn start> <if [Crisis Stage II Beacon] is constructed by anybody> <every [5] turns> <with [20]% chance> <if [Crisis Stage III Beacon] is not constructed by anybody> <when number of [Cities] is more than [0]>",
+        "[2] [Awakened Infantry]s rebel <upon turn start> <every [4] turns> <if [Crisis Stage II Beacon] is constructed by anybody> <when number of [[Awakened Infantry] Units] is less than [40]> <on [Prince] difficulty or lower>",
+        "[3] [Awakened Infantry]s rebel <upon turn start> <every [4] turns> <if [Crisis Stage II Beacon] is constructed by anybody> <when number of [[Awakened Infantry] Units] is less than [40]> <on [King] difficulty or higher>",
+        "[4] [Awakened Infantry]s rebel <upon turn start> <every [4] turns> <if [Crisis Stage II Beacon] is constructed by anybody> <when number of [[Awakened Infantry] Units] is less than [40]> <on [Immortal] difficulty or higher>"
     ]
 }

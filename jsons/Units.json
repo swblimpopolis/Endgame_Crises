@@ -1,6 +1,6 @@
 [
     {
-        "name": "Crisis Knight",
+        "name": "Awakened Knight",
         "unitType": "Mounted",
         "movement": 4,
         "strength": 40,
@@ -10,14 +10,54 @@
             "Can move after attacking",
             "No defensive terrain bonus",
             "[-33]% Strength <vs cities> <when attacking>",
+			"[+20]% Strength <when attacking>",
             "Never appears as a Barbarian unit",
             "Crisis",
             "Unbuildable",
             "Destroys [All] cities instead of capturing",
             "Heals [15] damage if it kills a unit",
-            "[1] free [Crisis Knight] units appear <upon turn end> <with [3]% chance> <when number of [[Crisis Knight] Units] is less than [40]>",
-            "[1] free [Crisis Knight] units appear <upon defeating a [Military] unit> <with [50]% chance> <when number of [[Crisis Knight] Units] is less than [40]>"
+            "[1] free [Awakened Knight] units appear <upon turn end> <with [5]% chance> <when number of [[Awakened Knight] Units] is less than [40]>",
+            "[1] free [Awakened Knight] units appear <upon defeating a [Military] unit> <with [50]% chance> <when number of [[Awakened Knight] Units] is less than [40]>"
         ],
         "attackSound": "horse"
+    },
+	{
+        "name": "Awakened Rifleman",
+        "unitType": "Gunpowder",
+        "movement": 2,
+        "strength": 68,
+        "uniques": [
+            "Ignores Zone of Control",
+            "Can pass through impassable tiles",
+            "No defensive terrain bonus",
+			"[+20]% Strength <when attacking>",
+            "Crisis",
+            "Unbuildable",
+            "Destroys [All] cities instead of capturing",
+            "Heals [25] damage if it kills a unit",
+            "[1] free [Awakened Rifleman] units appear <upon turn end> <with [5]% chance> <when number of [[Awakened Rifleman] Units] is less than [40]>",
+            "[1] free [Awakened Rifleman] units appear <upon defeating a [Military] unit> <with [50]% chance> <when number of [[Awakened Rifleman] Units] is less than [40]>"
+        ],
+        "attackSound": "shot"
+    },
+	{
+        "name": "Awakened Infantry",
+        "unitType": "Ranged Gunpowder",
+		"range": 1,
+        "movement": 2,
+        "strength": 100,
+        "uniques": [
+            "Ignores Zone of Control",
+            "Can pass through impassable tiles",
+            "No defensive terrain bonus",
+			"[+20]% Strength <when attacking>",
+            "Crisis",
+            "Unbuildable",
+            "Destroys [All] cities instead of capturing",
+            "Heals [30] damage if it kills a unit",
+            "[1] free [Awakened Infantry] units appear <upon turn end> <with [5]% chance> <when number of [[Awakened Infantry] Units] is less than [40]>",
+            "[1] free [Awakened Infantry] units appear <upon defeating a [Military] unit> <with [50]% chance> <when number of [[Awakened Infantry] Units] is less than [40]>"
+        ],
+        "attackSound": "shot"
     }
 ]

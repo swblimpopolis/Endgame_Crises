@@ -6,7 +6,46 @@
     "choices": [
       {
         "text": "Sound the alarm",
-        "uniques": ["Gain a free [Crisis Beacon] [in capital]", "Triggers the following global alert: [The Awakening has begun]"]
+        "uniques": [
+            "Gain a free [Crisis Beacon] [in capital]", 
+            "Triggers the following global alert: [The Awakening has begun]"
+        ]
+      }
+    ]
+  },
+{
+    "name": "Stage II Awakening",
+    "presentation": "Alert",
+    "text": "An army is gathering beneath the earth...",
+    "choices": [
+      {
+        "text": "Sound the alarm",
+        "uniques": [
+            "Gain a free [Crisis Stage II Beacon] [in capital]", 
+            "[+25]% Strength <vs [Crisis] units> <if [Crisis Stage II Beacon] is constructed by anybody>", 
+            "[+25]% Strength for cities <if [Crisis Stage II Beacon] is constructed by anybody>", 
+            "[-25]% [Science] [in all cities] <if [Crisis Stage II Beacon] is constructed by anybody>",
+            "[+25]% [Production] [in all cities] <if [Crisis Stage II Beacon] is constructed by anybody>", 
+            "Triggers the following global alert: [The Awakening grows stronger, the world mobilises in defense]"
+        ]
+        }
+    ]
+  },
+  {
+    "name": "Stage III Awakening",
+    "presentation": "Alert",
+    "text": "An army breaks from the earth...",
+    "choices": [
+      {
+        "text": "Sound the alarm",
+        "uniques": [
+            "Gain a free [Crisis Stage III Beacon] [in capital]", 
+            "[+35]% Strength <vs [Crisis] units> <if [Crisis Stage III Beacon] is constructed by anybody>", 
+            "[+50]% Strength for cities <if [Crisis Stage III Beacon] is constructed by anybody>", 
+            "[-50]% [Science] [in all cities] <if [Crisis Stage III Beacon] is constructed by anybody>",
+            "[+40]% [Production] [in all cities] <if [Crisis Stage III Beacon] is constructed by anybody>", 
+            "Triggers the following global alert: [The Awakening is here, the world is on the edge of destruction]"
+        ]
       }
     ]
   }

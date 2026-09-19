@@ -181,6 +181,47 @@ countable counts units owned by the relevant civ, which for a barbarian-owned
 unit is the Barbarians, so it is a hard global cap on swarm size. There is no
 other brake anywhere in the unique set.
 
+### Uniques stack; they never overwrite
+
+Two uniques whose conditionals both match **both fire**. There is no
+most-specific-wins rule anywhere in the engine. `<on [difficulty] difficulty or
+higher>` compares `indexOf` against the order in `Difficulties.json`
+(Settler 0, Chieftain 1, Warlord 2, Prince 3, King 4, Emperor 5, Immortal 6,
+Deity 7) and is inclusive, so difficulty tiers written the obvious way overlap:
+
+```
+[4] [X]s rebel ... <on [King] difficulty or higher>
+[6] [X]s rebel ... <on [Immortal] difficulty or higher>
+```
+
+gives 4 at King and Emperor but **10** at Immortal and Deity, not 6. Either band
+the lower tier with `<on [Emperor] difficulty or lower>`, or — usually tidier —
+write each tier as a **delta** and let stacking do the work: `[4]` for King or
+higher plus `[2]` for Immortal or higher yields 4 / 6, and a Deity tier is then
+one extra line rather than a rewrite.
+
+### Countables resolve against the evaluating civ, not the unit's owner
+
+This is the trap, because it **fails open**:
+
+```
+<when number of [[Crisis Knight] Units] is less than [40]>
+```
+
+- On the **unit** (self-replication), the evaluating civ is the unit's owner —
+  the Barbarians — so it is a real cap on swarm size. This is why the Crisis
+  Knight cap works.
+- In **GlobalUniques on a `rebel` unique**, the evaluating civ is whoever's turn
+  it is: a normal civ, owning zero crisis units. The condition is therefore
+  always true and the cap never binds.
+
+Identical text, opposite meaning, no warning from the validator. To cap
+`rebel` waves, the count has to be expressed some other way — or accept that
+waves are bounded only by their tick rate and let the per-unit cap do the work.
+
+Cheap check: set a rebel line's cap to `less than [0]`. If units still spawn,
+the conditional is being ignored.
+
 ### Delivery is not guaranteed, and not uniform
 
 Observed: on a `<every [10] turns>` spawn, **most** civs and city-states received
