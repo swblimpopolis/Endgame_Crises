@@ -44,7 +44,8 @@ for f in "$MOD_DIR"/jsons/*.json; do
     [ -e "$f" ] || continue
     name="$(basename "$f")"
 
-    # ModOptions is mod metadata, never merged — we write our own below.
+    # ModOptions is mod metadata; handled separately below so that its
+    # uniques (Allow raze capital, ...) still get validated.
     if [ "$name" = "ModOptions.json" ]; then continue; fi
 
     # Skip files that are empty or hold only an empty array/object.
@@ -70,7 +71,19 @@ for f in "$MOD_DIR"/jsons/*.json; do
     merged=$((merged+1))
 done
 
-echo '{"isBaseRuleset": true}' > "$BASE/ModOptions.json"
+# Carry the mod's own ModOptions uniques through, so things like
+# "Allow raze capital" are validated rather than silently skipped.
+MO="$MOD_DIR/jsons/ModOptions.json"
+if [ -f "$MO" ] && grep -q '"uniques"' "$MO"; then
+    python -c "
+import json,sys
+u = json.load(open(sys.argv[1], encoding='utf-8')).get('uniques', [])
+json.dump({'isBaseRuleset': True, 'uniques': u}, open(sys.argv[2],'w',encoding='utf-8'), indent=4)
+print('  carried %d ModOptions unique(s)' % len(u))
+" "$MO" "$BASE/ModOptions.json"
+else
+    echo '{"isBaseRuleset": true}' > "$BASE/ModOptions.json"
+fi
 cp "$JAR" "$MERGED/Unciv.jar"
 
 echo
