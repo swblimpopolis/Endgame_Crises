@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Crisis Knight",
+		"unitType": "Mounted",
+		"movement": 4,
+		"strength": 40,
+		"uniques": ["Ignores Zone of Control", "Can pass through impassable tiles","Can move after attacking", "No defensive terrain bonus", "[-33]% Strength <vs cities> <when attacking>", "Never appears as a Barbarian unit", "Crisis", "Unbuildable", "Destroys [All] cities instead of capturing", "Heals [15] damage if it kills a unit"],
+		"attackSound": "horse"
+    }
+]

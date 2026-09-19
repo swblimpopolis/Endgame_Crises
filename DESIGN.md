@@ -55,13 +55,14 @@ Consequences worth not rediscovering:
 
 ## Spike results
 
-Two assumptions carry the design. Record the answers here once tested — the
-protocol for both is in the artifact under Phase −1.
+Assumptions the design rests on. Record answers here once tested — the protocol
+is in the artifact under Phase −1.
 
 | Test | Question | Result |
 |---|---|---|
 | A | Does `<if [X] is constructed by anybody>` see a **trigger-granted** building? | **YES** |
 | B | Do Barbarians evaluate `GlobalUniques` `<upon turn start>` triggers? | **YES** |
+| C | Can Barbarians **own a city**? | _untested — needed before Phase 5_ |
 
 Tested against Unciv 4.21.18.
 
@@ -103,6 +104,42 @@ Barbarians.** Three consequences, in order of severity:
    cities-greater-than-zero guard.
 3. **Waves are safe.** `[N] [unit]s rebel` requires a city and aborts without one,
    so wave sizes do not double. No rebalancing needed.
+
+### C — can Barbarians own a city?
+
+**Why it matters.** Two load-bearing mechanisms assume barbarians own zero cities:
+
+- `<when number of [Cities] is more than [0]>` is what stops them firing the
+  crisis trigger (see B, consequence 1). A barbarian holding one city makes that
+  guard fail open.
+- `[N] [unit]s rebel` aborts for a civ with no city. A barbarian holding a city
+  makes the wave uniques start working *for the crisis*, spawning a second wave
+  at the captured city every tick.
+
+**Why it's now live rather than theoretical.** `Destroys [cityFilter] cities
+instead of capturing` — the unique on Crisis Knight — is documented as:
+
+> The unit will destroy [cityFilter] cities instead of capturing them, also allows
+> non-melee units to destroy cities. Capital cities (including city states) are
+> immune to this effect.
+
+So capitals are *not* razed, and the fallback is ordinary capture. Whether the
+engine then lets the Barbarians hold it, razes it anyway, or hands it elsewhere is
+unconfirmed — static analysis found the raid/pillage branch in `Battle` but the
+capture path for barbarians was not fully traced.
+
+**How to test.** Extension mod, small map. Give yourself a throwaway unit with
+`Destroys [All] cities instead of capturing` and high strength, let a barbarian
+melee unit take one of your non-capital cities, then a capital. After each,
+check the Barbarians in the nations overview for a city count. Faster variant:
+one city, deliberately undefended, and watch what the notification says —
+"destroyed" vs "captured" answers it immediately.
+
+**If C is yes**, the guard has to change from a cities count to something
+barbarians can never satisfy, and the wave uniques need their own exclusion.
+Candidates to check at that point: `<for [civFilter] Civilizations>` (the filter
+has no barbarian value, so it may not help), or gating on a marker Building that
+only a real civ can hold.
 
 ### Delivery is not guaranteed, and not uniform
 
