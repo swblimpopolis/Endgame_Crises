@@ -60,18 +60,74 @@ protocol for both is in the artifact under Phase −1.
 
 | Test | Question | Result |
 |---|---|---|
-| A | Does `<if [X] is constructed by anybody>` see a **trigger-granted** building? | _untested_ |
-| B | Do Barbarians evaluate `GlobalUniques` `<upon turn start>` triggers? | _untested_ |
+| A | Does `<if [X] is constructed by anybody>` see a **trigger-granted** building? | **YES** |
+| B | Do Barbarians evaluate `GlobalUniques` `<upon turn start>` triggers? | **YES** |
 
-Tested against Unciv version: _____
+Tested against Unciv 4.21.18.
 
-**If A is false**, the flag mechanism has to change: fall back to a marker Policy
-(`Adopt [policy/belief]` + `<after adopting [policy/belief]>`), which is per-civ
-rather than global, so the crisis would begin independently for each civ. Phases
-3–7 shift with it.
+**A is confirmed.** All four steps behaved as predicted — baseline gold fired, the
+Beacon was granted, the `is constructed by anybody` gold fired afterwards, and the
+trailing `is not constructed` control correctly did *not* fire. The hidden-building
+flag is therefore a valid substitute for the mod-writable state Unciv doesn't have,
+and the one-shot trigger, the stage-marker escalation chain and the Survival
+victory all rest on solid ground. No Policy fallback needed.
 
-**If B is true**, every global `<upon turn start>` trigger fires an extra time with
-barbarians as the beneficiary — halve all wave sizes.
+**Confirmed while testing B:** global `<upon turn start>` triggers fire for every
+major civ **and for city-states**. So crisis waves will spawn at city-state cities
+too — which is the indiscriminate behaviour the design wants, but it means
+city-states contribute to the total spawn count. Budget wave sizes accordingly.
+
+**B is confirmed yes.** A barbarian-owned marker appeared once barbarians had at
+least one unit on the map to place it beside. (The first run was a false negative:
+`Free [unit] appears` resolves a placement target in order — a city, else a tile
+from context, else next to the civ's first existing unit, else it aborts. With no
+barbarian units and no barbarian cities there was nowhere to put one.)
+
+### What B=yes changes
+
+**Anything triggerable placed in `GlobalUniques.json` also fires for the
+Barbarians.** Three consequences, in order of severity:
+
+1. **The crisis trigger must exclude them.** If barbarians can roll
+   `Triggers a [The Awakening] event`, they will eventually fire it — the event
+   auto-resolves for AI civs, so its choice runs, `Triggers the following global
+   alert` announces the crisis to everyone, and then
+   `Gain a free [Crisis Beacon] [in capital]` silently aborts because barbarians
+   have no capital. Result: the world is told the crisis began, the flag is never
+   set, and no waves ever spawn. Guard every crisis trigger with
+   `<when number of [Cities] is more than [0]>` — barbarians own zero cities;
+   city-states own at least one, so they still take part.
+2. **`Free [unit] appears` uniques arm the crisis.** The Phase 5 emergency
+   mobilization (`[2] free [Rifleman] units appear`) would hand free Riflemen to
+   the barbarians. Move it onto a Policy or Building, or apply the same
+   cities-greater-than-zero guard.
+3. **Waves are safe.** `[N] [unit]s rebel` requires a city and aborts without one,
+   so wave sizes do not double. No rebalancing needed.
+
+### Delivery is not guaranteed, and not uniform
+
+Observed: on a `<every [10] turns>` spawn, **most** civs and city-states received
+their unit on the same game turn, but some received it only on a later tick. So
+global triggers are not a reliable "every civ, every time" broadcast.
+
+Two candidate explanations, neither yet confirmed:
+
+- **Placement failure, retried on the next tick.** `Free [unit] appears` has to
+  find somewhere to put the unit; if the capital and its surroundings are full
+  (one military unit per tile), the trigger fails silently that turn and succeeds
+  10 turns later when there is room. This is the more likely cause and it is
+  testable — spawn `<every [2] turns>` into a deliberately crowded city and see
+  whether the misses correlate with congestion.
+- **Observation lag.** AI civs resolve their turns after the human's, so a spawn
+  on the AI's turn N is only visible to the human on turn N+1. This would explain
+  a uniform one-turn offset but not why *some* civs lagged and others didn't.
+
+**What this means for the mod either way:** do not assume a wave unique delivers to
+every civ on every tick. Crisis waves use `[N] [unit]s rebel`, which places at the
+city centre and so is less fragile than `Free [unit] appears`, but a besieged or
+unit-packed city can still swallow a spawn. Budget waves on the assumption that
+some fraction will silently not arrive, and prefer more frequent small waves over
+rare large ones so a single failure matters less.
 
 ## Validating this mod
 
