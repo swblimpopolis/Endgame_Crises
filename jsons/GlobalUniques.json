@@ -2,6 +2,9 @@
     "name": "Global Uniques",
     "uniques": [
         "Triggers a [The Awakening] event <upon turn start> <after turn number [280]> <every [5] turns> <with [20]% chance> <if [Crisis Beacon] is not constructed by anybody> <when number of [Cities] is more than [0]> <hidden from users>",
+        "Gain a free [Crisis Beacon] [in capital] <upon turn start> <if [Crisis Beacon] is constructed by anybody> <if [Crisis Beacon] is not constructed> <when number of [Cities] is more than [0]> <hidden from users>",
+        "Gain a free [Crisis Stage II Beacon] [in capital] <upon turn start> <if [Crisis Stage II Beacon] is constructed by anybody> <if [Crisis Stage II Beacon] is not constructed> <when number of [Cities] is more than [0]> <hidden from users>",
+        "Gain a free [Crisis Stage III Beacon] [in capital] <upon turn start> <if [Crisis Stage III Beacon] is constructed by anybody> <if [Crisis Stage III Beacon] is not constructed> <when number of [Cities] is more than [0]> <hidden from users>",
         "[2] [Awakened Knight]s rebel <upon turn start> <every [4] turns> <if [Crisis Beacon] is constructed by anybody> <when number of [[Awakened Knight] Units] is less than [40]> <on [Prince] difficulty or lower> <hidden from users>",
         "[4] [Awakened Knight]s rebel <upon turn start> <every [4] turns> <if [Crisis Beacon] is constructed by anybody> <when number of [[Awakened Knight] Units] is less than [40]> <on [King] difficulty or higher> <on [Emperor] difficulty or lower> <hidden from users>",
         "[6] [Awakened Knight]s rebel <upon turn start> <every [4] turns> <if [Crisis Beacon] is constructed by anybody> <when number of [[Awakened Knight] Units] is less than [40]> <on [Immortal] difficulty or higher> <hidden from users>",
