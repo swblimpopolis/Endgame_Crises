@@ -11,10 +11,14 @@
         "cost": -1,
         "uniques": ["Unbuildable", "Will not be displayed in Civilopedia"]
     },
-        {
+    {
         "name": "Crisis Stage III Beacon",
         "isNationalWonder": true,
         "cost": -1,
+        "uniques": ["Unbuildable", "Will not be displayed in Civilopedia"]
+    },
+    {
+        "name": "The Bastion",
         "uniques": ["Unbuildable", "Will not be displayed in Civilopedia"]
     }
 ]

@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Survival",
+    "victoryScreenHeader": "Endure the Crisis to win!",
+    "milestones": ["Build [The Bastion]"],
+    "victoryString": "You have achieved victory through Surviving The Awakening! You have saved humanity against the horrors of the awakened monsters. You are safe now and human kind wins!",
+    "defeatString": "You have been defeated. Your civilization has been overwhelmed by its many foes. But your people do not despair, for they know that one day you shall return - and lead them forward to victory!"
+  }
+]

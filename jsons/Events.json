@@ -22,10 +22,6 @@
         "text": "Sound the alarm",
         "uniques": [
             "Gain a free [Crisis Stage II Beacon] [in capital]", 
-            "[+25]% Strength <vs [Crisis] units> <if [Crisis Stage II Beacon] is constructed by anybody>", 
-            "[+25]% Strength for cities <if [Crisis Stage II Beacon] is constructed by anybody>", 
-            "[-25]% [Science] [in all cities] <if [Crisis Stage II Beacon] is constructed by anybody>",
-            "[+25]% [Production] [in all cities] <if [Crisis Stage II Beacon] is constructed by anybody>", 
             "Triggers the following global alert: [The Awakening grows stronger, the world mobilises in defense]"
         ]
         }
@@ -40,11 +36,20 @@
         "text": "Sound the alarm",
         "uniques": [
             "Gain a free [Crisis Stage III Beacon] [in capital]", 
-            "[+35]% Strength <vs [Crisis] units> <if [Crisis Stage III Beacon] is constructed by anybody>", 
-            "[+50]% Strength for cities <if [Crisis Stage III Beacon] is constructed by anybody>", 
-            "[-50]% [Science] [in all cities] <if [Crisis Stage III Beacon] is constructed by anybody>",
-            "[+40]% [Production] [in all cities] <if [Crisis Stage III Beacon] is constructed by anybody>", 
             "Triggers the following global alert: [The Awakening is here, the world is on the edge of destruction]"
+        ]
+      }
+    ]
+  },
+   {
+    "name": "The Crisis Passes",
+    "presentation": "Alert",
+    "text": "The enemies stop coming, they have been repelled and the world breathes a sigh of relief...",
+    "choices": [
+      {
+        "text": "Well done",
+        "uniques": [
+            "Gain a free [The Bastion] [in capital]"
         ]
       }
     ]

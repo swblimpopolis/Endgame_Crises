@@ -1,0 +1,7 @@
+[
+    {
+        "name": "Crisis Duration",
+        "resourceType": "Bonus",
+        "uniques": ["Stockpiled", "Doesn't generate naturally"]
+    }
+]

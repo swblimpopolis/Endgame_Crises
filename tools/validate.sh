@@ -36,8 +36,10 @@ mv "$WORK/jsons/$RULESET"/*.json "$BASE/"
 # Strip the outer [ ] from a JSON array file, as text.
 # Done textually because the bundled rulesets use // comments and trailing
 # commas, which a strict JSON parser rejects.
-inner_of() { awk 'BEGIN{RS="\0"}{sub(/^[[:space:]]*\[/,""); sub(/\][[:space:]]*$/,""); printf "%s", $0}' "$1"; }
-without_close() { awk 'BEGIN{RS="\0"}{sub(/\][[:space:]]*$/,""); printf "%s", $0}' "$1"; }
+# Unciv's bundled json tolerates trailing commas, so strip any before splicing
+# or the merge produces ",," and the parser dies.
+inner_of() { awk 'BEGIN{RS="\0"}{sub(/^[[:space:]]*\[/,""); sub(/\][[:space:]]*$/,""); sub(/,[[:space:]]*$/,""); printf "%s", $0}' "$1"; }
+without_close() { awk 'BEGIN{RS="\0"}{sub(/\][[:space:]]*$/,""); sub(/,[[:space:]]*$/,""); printf "%s", $0}' "$1"; }
 
 merged=0
 for f in "$MOD_DIR"/jsons/*.json; do
