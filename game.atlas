@@ -1,19 +1,47 @@
 
 game.png
-size: 256, 128
+size: 1024, 128
 format: RGBA8888
 filter: MipMapLinearLinear, MipMapLinearLinear
 repeat: none
-TileSets/AbsoluteUnits/Units/Crisis Knight
+TileSets/AbsoluteUnits/Units/Awakened Infantry
   rotate: false
-  xy: 112, 34
+  xy: 328, 23
+  size: 95, 81
+  orig: 95, 81
+  offset: 0, 0
+  index: -1
+TileSets/AbsoluteUnits/Units/Awakened Knight
+  rotate: false
+  xy: 534, 34
   size: 77, 70
   orig: 77, 70
   offset: 0, 0
   index: -1
-UnitIcons/Crisis Knight
+TileSets/AbsoluteUnits/Units/Awakened Rifleman
+  rotate: false
+  xy: 431, 23
+  size: 95, 81
+  orig: 95, 81
+  offset: 0, 0
+  index: -1
+UnitIcons/Awakened Infantry
   rotate: false
   xy: 4, 4
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Awakened Knight
+  rotate: false
+  xy: 112, 4
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+UnitIcons/Awakened Rifleman
+  rotate: false
+  xy: 220, 4
   size: 100, 100
   orig: 100, 100
   offset: 0, 0

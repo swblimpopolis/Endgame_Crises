@@ -1,57 +1,57 @@
 [
-  {
-    "name": "The Awakening",
-    "presentation": "Alert",
-    "text": "Something vast has stirred beneath the earth...",
-    "choices": [
-      {
-        "text": "Sound the alarm",
-        "uniques": [
-            "Gain a free [Crisis Beacon] [in capital]", 
-            "Triggers the following global alert: [The Awakening has begun]"
+    {
+        "name": "The Awakening",
+        "presentation": "None",
+        "text": "Something vast has stirred beneath the earth...",
+        "choices": [
+            {
+                "text": "Sound the alarm",
+                "uniques": [
+                    "Gain a free [Crisis Beacon] [in capital]",
+                    "Triggers the following global alert: [The Awakening has begun]"
+                ]
+            }
         ]
-      }
-    ]
-  },
-{
-    "name": "Stage II Awakening",
-    "presentation": "Alert",
-    "text": "An army is gathering beneath the earth...",
-    "choices": [
-      {
-        "text": "Sound the alarm",
-        "uniques": [
-            "Gain a free [Crisis Stage II Beacon] [in capital]", 
-            "Triggers the following global alert: [The Awakening grows stronger, the world mobilises in defense]"
+    },
+    {
+        "name": "Stage II Awakening",
+        "presentation": "None",
+        "text": "An army is gathering beneath the earth...",
+        "choices": [
+            {
+                "text": "Sound the alarm",
+                "uniques": [
+                    "Gain a free [Crisis Stage II Beacon] [in capital]",
+                    "Triggers the following global alert: [The Awakening grows stronger, the world mobilises in defense]"
+                ]
+            }
         ]
-        }
-    ]
-  },
-  {
-    "name": "Stage III Awakening",
-    "presentation": "Alert",
-    "text": "An army breaks from the earth...",
-    "choices": [
-      {
-        "text": "Sound the alarm",
-        "uniques": [
-            "Gain a free [Crisis Stage III Beacon] [in capital]", 
-            "Triggers the following global alert: [The Awakening is here, the world is on the edge of destruction]"
+    },
+    {
+        "name": "Stage III Awakening",
+        "presentation": "None",
+        "text": "An army breaks from the earth...",
+        "choices": [
+            {
+                "text": "Sound the alarm",
+                "uniques": [
+                    "Gain a free [Crisis Stage III Beacon] [in capital]",
+                    "Triggers the following global alert: [The Awakening is here, the world is on the edge of destruction]"
+                ]
+            }
         ]
-      }
-    ]
-  },
-   {
-    "name": "The Crisis Passes",
-    "presentation": "Alert",
-    "text": "The enemies stop coming, they have been repelled and the world breathes a sigh of relief...",
-    "choices": [
-      {
-        "text": "Well done",
-        "uniques": [
-            "Gain a free [The Bastion] [in capital]"
+    },
+    {
+        "name": "The Crisis Passes",
+        "presentation": "None",
+        "text": "The enemies stop coming, they have been repelled and the world breathes a sigh of relief...",
+        "choices": [
+            {
+                "text": "Well done",
+                "uniques": [
+                    "Gain a free [The Bastion] [in capital]"
+                ]
+            }
         ]
-      }
-    ]
-  }
+    }
 ]
