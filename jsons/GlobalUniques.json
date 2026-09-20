@@ -5,38 +5,45 @@
         "Triggers a [The Omens] event <upon turn start> <after turn number [280]> <every [5] turns> <with [20]% chance> <if [Crisis Omen] is not constructed by anybody> <when number of [Cities] is more than [0]> <on [Standard] game speed> <hidden from users>",
         "Triggers a [The Omens] event <upon turn start> <after turn number [420]> <every [5] turns> <with [20]% chance> <if [Crisis Omen] is not constructed by anybody> <when number of [Cities] is more than [0]> <on [Epic] game speed> <hidden from users>",
         "Triggers a [The Omens] event <upon turn start> <after turn number [840]> <every [5] turns> <with [20]% chance> <if [Crisis Omen] is not constructed by anybody> <when number of [Cities] is more than [0]> <on [Marathon] game speed> <hidden from users>",
+
         "Gain a free [Crisis Omen] [in capital] <upon turn start> <if [Crisis Omen] is constructed by anybody> <if [Crisis Omen] is not constructed> <when number of [Cities] is more than [0]> <hidden from users>",
         "Gain a free [Crisis Beacon] [in capital] <upon turn start> <if [Crisis Beacon] is constructed by anybody> <if [Crisis Beacon] is not constructed> <when number of [Cities] is more than [0]> <hidden from users>",
         "Gain a free [Crisis Stage II Beacon] [in capital] <upon turn start> <if [Crisis Stage II Beacon] is constructed by anybody> <if [Crisis Stage II Beacon] is not constructed> <when number of [Cities] is more than [0]> <hidden from users>",
         "Gain a free [Crisis Stage III Beacon] [in capital] <upon turn start> <if [Crisis Stage III Beacon] is constructed by anybody> <if [Crisis Stage III Beacon] is not constructed> <when number of [Cities] is more than [0]> <hidden from users>",
+
         "Instantly provides [3] [Crisis Duration] <upon turn start> <if [Crisis Omen] is constructed by anybody> <every [2] turns> <when number of [Cities] is more than [0]> <on [Quick] game speed> <hidden from users>",
         "Instantly provides [1] [Crisis Duration] <upon turn start> <if [Crisis Omen] is constructed by anybody> <when number of [Cities] is more than [0]> <on [Standard] game speed> <hidden from users>",
         "Instantly provides [2] [Crisis Duration] <upon turn start> <if [Crisis Omen] is constructed by anybody> <every [3] turns> <when number of [Cities] is more than [0]> <on [Epic] game speed> <hidden from users>",
         "Instantly provides [1] [Crisis Duration] <upon turn start> <if [Crisis Omen] is constructed by anybody> <every [3] turns> <when number of [Cities] is more than [0]> <on [Marathon] game speed> <hidden from users>",
+
         "Triggers a [The Awakening] event <upon turn start> <if [Crisis Omen] is constructed by anybody> <if [Crisis Beacon] is not constructed by anybody> <when number of [Crisis Duration] is more than [19]> <when number of [Cities] is more than [0]> <hidden from users>",
+
         "[2] [Awakened Knight]s rebel <upon turn start> <every [4] turns> <if [Crisis Beacon] is constructed by anybody> <when number of [[Awakened Knight] Units] is less than [40]> <on [Prince] difficulty or lower> <hidden from users>",
         "[4] [Awakened Knight]s rebel <upon turn start> <every [4] turns> <if [Crisis Beacon] is constructed by anybody> <when number of [[Awakened Knight] Units] is less than [40]> <on [King] difficulty or higher> <on [Emperor] difficulty or lower> <hidden from users>",
         "[6] [Awakened Knight]s rebel <upon turn start> <every [4] turns> <if [Crisis Beacon] is constructed by anybody> <when number of [[Awakened Knight] Units] is less than [40]> <on [Immortal] difficulty or higher> <hidden from users>",
+
         "Triggers a [Stage II Awakening] event <upon turn start> <if [Crisis Beacon] is constructed by anybody> <if [Crisis Stage II Beacon] is not constructed by anybody> <when number of [Crisis Duration] is more than [44]> <when number of [Cities] is more than [0]> <hidden from users>",
+
         "[2] [Awakened Rifleman]s rebel <upon turn start> <every [4] turns> <if [Crisis Stage II Beacon] is constructed by anybody> <when number of [[Awakened Rifleman] Units] is less than [40]> <on [Prince] difficulty or lower> <hidden from users>",
         "[3] [Awakened Rifleman]s rebel <upon turn start> <every [4] turns> <if [Crisis Stage II Beacon] is constructed by anybody> <when number of [[Awakened Rifleman] Units] is less than [40]> <on [King] difficulty or higher> <on [Emperor] difficulty or lower> <hidden from users>",
         "[4] [Awakened Rifleman]s rebel <upon turn start> <every [4] turns> <if [Crisis Stage II Beacon] is constructed by anybody> <when number of [[Awakened Rifleman] Units] is less than [40]> <on [Immortal] difficulty or higher> <hidden from users>",
+
         "[+25]% Strength <vs [Crisis] units> <if [Crisis Stage II Beacon] is constructed by anybody>",
         "[+25]% Strength for cities <if [Crisis Stage II Beacon] is constructed by anybody>",
         "[-25]% [Science] [in all cities] <if [Crisis Stage II Beacon] is constructed by anybody>",
         "[+25]% [Production] [in all cities] <if [Crisis Stage II Beacon] is constructed by anybody>",
-        "[+10]% Strength <vs [Crisis] units> <if [Crisis Stage III Beacon] is constructed by anybody>",
-        "[+25]% Strength for cities <if [Crisis Stage III Beacon] is constructed by anybody>",
-        "[-25]% [Science] [in all cities] <if [Crisis Stage III Beacon] is constructed by anybody>",
-        "[+25]% [Production] [in all cities] <if [Crisis Stage III Beacon] is constructed by anybody>",
+
         "Triggers a [Stage III Awakening] event <upon turn start> <if [Crisis Stage II Beacon] is constructed by anybody> <if [Crisis Stage III Beacon] is not constructed by anybody> <when number of [Crisis Duration] is more than [69]> <when number of [Cities] is more than [0]> <hidden from users>",
+
         "[2] [Awakened Infantry]s rebel <upon turn start> <every [4] turns> <if [Crisis Stage III Beacon] is constructed by anybody> <when number of [[Awakened Infantry] Units] is less than [40]> <on [Prince] difficulty or lower> <hidden from users>",
         "[3] [Awakened Infantry]s rebel <upon turn start> <every [4] turns> <if [Crisis Stage III Beacon] is constructed by anybody> <when number of [[Awakened Infantry] Units] is less than [40]> <on [King] difficulty or higher> <on [Emperor] difficulty or lower> <hidden from users>",
         "[4] [Awakened Infantry]s rebel <upon turn start> <every [4] turns> <if [Crisis Stage III Beacon] is constructed by anybody> <when number of [[Awakened Infantry] Units] is less than [40]> <on [Immortal] difficulty or higher> <hidden from users>",
+
         "[+10]% Strength <vs [Crisis] units> <if [Crisis Stage III Beacon] is constructed by anybody>",
         "[+25]% Strength for cities <if [Crisis Stage III Beacon] is constructed by anybody>",
         "[-25]% [Science] [in all cities] <if [Crisis Stage III Beacon] is constructed by anybody>",
         "[+25]% [Production] [in all cities] <if [Crisis Stage III Beacon] is constructed by anybody>",
+        
         "Triggers a [The Crisis Passes] event <upon turn start> <when number of [Crisis Duration] is more than [119]> <if [The Bastion] is not constructed by anybody> <when number of [Cities] is more than [0]> <hidden from users>"
     ]
 }
