@@ -1,5 +1,19 @@
 [
     {
+        "name": "The Omens",
+        "presentation": "None",
+        "text": "The ground trembles. Livestock will not settle, and the old maps no longer agree with the coast.",
+        "choices": [
+            {
+                "text": "Prepare",
+                "uniques": [
+                    "Gain a free [Crisis Omen] [in capital]",
+                    "Triggers the following global alert: [Something is stirring. We have perhaps twenty years to ready ourselves]"
+                ]
+            }
+        ]
+    },
+    {
         "name": "The Awakening",
         "presentation": "None",
         "text": "Something vast has stirred beneath the earth...",
